@@ -1,0 +1,101 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #00ff00;
+    --error-color: #ff3333;
+    --font-stack: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #000;
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.terminal-window {
+    width: 800px;
+    max-width: 95%;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.terminal-header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.title {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.terminal-body {
+    padding: 20px;
+    min-height: 300px;
+}
+
+.sys-msg {
+    margin: 0 0 15px 0;
+    opacity: 0.8;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    flex-grow: 1;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(0, 255, 0, 0.3);
+}
+
+.hidden-btn {
+    display: none; /* Hide button to force "Enter" key usage like a real terminal */
+}
+
+.output {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.error {
+    color: var(--error-color);
+}

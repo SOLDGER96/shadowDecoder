@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Decoder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <span class="btn red"></span>
+            <span class="btn yellow"></span>
+            <span class="btn green"></span>
+            <span class="title">root@linux: ~/shadow-decoder</span>
+        </div>
+        <div class="terminal-body">
+            <p class="sys-msg">Welcome to Shadow Date Decoder v1.0.</p>
+            <p class="sys-msg">Enter days since epoch OR paste a full /etc/shadow line.</p>
+            
+            <form id="decoderForm">
+                <div class="input-line">
+                    <span class="prompt">root@linux:~#</span>
+                    <input type="text" id="shadowInput" autocomplete="off" autofocus placeholder="e.g. 17933 or user:$6$abc:17933:0:99999:7:::">
+                </div>
+                <button type="submit" class="hidden-btn">Decode</button>
+            </form>
+
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
